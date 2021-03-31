@@ -1,0 +1,38 @@
+{
+  "name"       : "technovistalimited/uppish",
+  "description": "Reusable component for uploading attachments in Laravel-based web application.",
+  "keywords"   : ["laravel", "file upload", "image upload", "uploads", "uppish"],
+  "license"    : "MIT",
+  "type"       : "package",
+  "authors"    : [
+    {
+      "name"    : "Mayeenul Islam",
+      "email"   : "islam.mayeenul@gmail.com",
+      "homepage": "https://nanodesignsbd.com",
+      "role"    : "Lead Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.3|^8.0",
+    "intervention/image": "^2.5"
+  },
+  "require-dev": {
+    "laravel/framework": ">=5.8"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Technovistalimited\\Uppish\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Technovistalimited\\Uppish\\UppishServiceProvider"
+      ],
+      "aliases": {
+        "Uppish": "Technovistalimited\\Uppish\\Facades\\Uppish"
+      }
+    }
+  }
+}

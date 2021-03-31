@@ -1,0 +1,44 @@
+.btn-uppish,
+.js-uppish-delete-file,
+.js-uppish-file-link {
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    background-color: transparent;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.js-uppish-delete-file {
+    color: #e3342f;
+    border: 1px solid #e3342f;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.js-uppish-file-link {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-uppish:focus,
+.btn-uppish.focus,
+.btn-uppish:hover,
+.btn-uppish.hover,
+.btn-uppish:active{
+    background-color: rgba( 37, 116, 169, 0.05 );
+    border-color: rgba(37, 116, 169, 1);
+}
+
+.js-uppish-uploaded-file {
+    position: relative;
+}
+
+.uppish-success,
+.uppish-error,
+.uppish-progress {
+    display: inline-block;
+    margin-left: 0.25rem;
+}

@@ -1,0 +1,56 @@
+## IDE/Editor
+.idea
+.idea/*
+.vscode
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+_ide_helper.php
+sublime-gulp.log
+.history
+
+## Build files
+/dist/*
+
+## Windows shortcuts
+*.lnk
+
+## Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+## Folder config file
+Desktop.ini
+
+## Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+## Log files
+*.todo
+*.log
+
+## Archive files
+*.rar
+*.zip
+*.7zip
+
+## Node modules
+/node_modules/
+npm-debug.log
+
+## Vendors
+vendor/
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+storage/*.key
+.env.*.php
+.env.php
+.env
+Homestead.yaml
+Homestead.json
