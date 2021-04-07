@@ -1726,7 +1726,7 @@ class UppishController extends Controller
         }
 
         // Set file URL relative to public/ directory.
-        $file = url("/storage/" . $file);
+        $file = url("/storage/{$file}");
 
         return $file;
     }

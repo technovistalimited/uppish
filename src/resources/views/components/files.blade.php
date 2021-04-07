@@ -9,6 +9,7 @@
  * Attributes:
  * - name:       (string) - mandatory - Accepts string or string-array; eg. 'file' for single file, 'files[]' for multiple.
  * - isRequired: (boolean) - optional - True if the field is required, false by default.
+ * - accept:     (string)  - optional - Accepts comma separated extensions or MIME types. Default: config('uppish.accepted_extensions').
  * - size:       (integer) - optional - Value in binary bytes. Default: config('uppish.upload_max_size').
  * - limit:      (integer) - optional - Value in number. Default and Max.: config('uppish.maximum_files').
  * - groupClass: (string)  - optional - Group item HTML class. Default: ''.
@@ -23,6 +24,7 @@
 @props([
     'name', // eg. 'attachment' for single item, 'attachments[]' for multiple items.
     'isRequired' => false,
+    'accept'     => null,
     'size'       => null, // in binary bytes.
     'limit'      => null, // in number.
     'groupClass' => '',
