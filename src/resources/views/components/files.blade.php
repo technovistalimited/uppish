@@ -44,8 +44,8 @@
     }
 @endphp
 
-<div {{ $attributes->merge(['class' => "uppish {$groupClass}"]) }}>
-    <div {{ $attributes->merge(['class' => "btn-uppish {$btnClass}"]) }} tabindex="-1">
+<div class="uppish {{ $groupClass }}">
+    <div class="btn-uppish {{ $btnClass }}" tabindex="-1">
         <span>{{ $btnText ? $btnText : __('Browse') . '…' }}</span>
         <input type="file" data-name="{{ $name }}"
             {{ $attributes->merge(['class' => "js-uppish {$fieldClass}"]) }}
