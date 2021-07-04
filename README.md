@@ -45,7 +45,7 @@
 Get to your project root, and run the following command:
 
 ```shell
-git clone git@gitlab.com:technovistaltd/tvl/uppish.git packages/technovistalimited/uppish/
+git clone git@github.com:technovistalimited/uppish.git packages/technovistalimited/uppish/
 ```
 
 ### Step 2: Add the repository to your app
