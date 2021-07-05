@@ -162,12 +162,10 @@ public function store(Request $request)
 
 #### **Blade files**
 
-Pass the information of already uploaded files in an array.
+Pass the information of already uploaded files in a string (for single file) or in an array (for multiple files).
 
 ```php
-// $file = array(
-//     'public/uploads/2021/04/1617194983-My-Document.pdf',
-// );
+// $file = 'public/uploads/2021/04/1617194983-My-Document.pdf';
 
 // Note the colon (:) before 'files'.
 <x-uppish::files name="upload" :files="$file" />
