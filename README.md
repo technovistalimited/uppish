@@ -48,6 +48,10 @@ Get to your project root, and run the following command:
 git clone git@github.com:technovistalimited/uppish.git packages/technovistalimited/uppish/
 ```
 
+> ⚠️ **REMOVE `.git` DIRECTORY** ⚠️
+> Don't forget to remove `.git` directory from the `packages/technovistalimited/uppish/` path if you have a global version controlling in your project. You can use the following command right after the cloning:<br>
+> `cd packages/technovistalimited/uppish/ && rm -rf .git`
+
 ### Step 2: Add the repository to your app
 
 #### `composer.json`
