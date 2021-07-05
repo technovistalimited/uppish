@@ -5,6 +5,7 @@ namespace Technovistalimited\Uppish\Controllers;
 use Image; // Intervention Image.
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\File;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 
@@ -126,6 +127,30 @@ class UppishController extends Controller
     public function delete(Request $request)
     {
         return $this->deleteFromPath($request->file);
+    }
+
+    /**
+     * Clear the tmp/ directory.
+     *
+     * Delete all the files from the tmp/ directory completely.
+     *
+     * @link https://www.geeksforgeeks.org/deleting-all-files-from-a-folder-using-php/
+     *
+     * @return boolean True, when done. False if no file found.
+     */
+    public function clearTemp()
+    {
+        $files = File::glob(storage_path('app/public/' . $this->sanitizeUploadPath() . 'tmp/*'));
+
+        if (empty($files)) {
+            return false;
+        }
+
+        foreach ($files as $file) {
+            unlink($file); // Delete it.
+        }
+
+        return true;
     }
 
     /**

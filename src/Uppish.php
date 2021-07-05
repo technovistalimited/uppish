@@ -58,6 +58,16 @@ class Uppish
     }
 
     /**
+     * Uppish: Clear Temp.
+     */
+    public static function clearTemp()
+    {
+        $uppish = new UppishController;
+
+        return $uppish->clearTemp();
+    }
+
+    /**
      * Uppish: getFileURL.
      */
     public static function getFileURL($file)

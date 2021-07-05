@@ -13,13 +13,14 @@
         - [Aliases array](#aliases-array)
     - [Step 4: Publish the Necessary files](#step-4-publish-the-necessary-files)
 - [How to use](#how-to-use)
-    - [form blade](#form-blade)
+    - [Load styles and Scripts](#load-styles-and-scripts)
     - [Add Mode](#add-mode)
     - [Edit Mode](#edit-mode)
         - [**Blade files**](#blade-files)
         - [**Controller**](#controller)
     - [Get File URL](#get-file-url)
     - [Get Image URL](#get-image-url)
+    - [Clearing `/tmp` directory](#clearing-tmp-directory)
     - [Pluggability](#pluggability)
         - [`isRequired`](#isrequired)
         - [`accept`](#accept)
@@ -32,6 +33,7 @@
         - [`btnText`](#btntext)
     - [Overriding things](#overriding-things)
         - [Overriding Routes](#overriding-routes)
+        - [Overriding Uploaded Files' UI](#overriding-uploaded-files-ui)
 - [Credits](#credits)
 - [Wishlists](#wishlists)
 
@@ -220,6 +222,14 @@ $thumbnailImageURL = Uppish::getImageURL($image, 'tmb');
 $mediumImageURL    = Uppish::getImageURL($image, 'med');
 ```
 
+### Clearing `/tmp` directory
+
+```php
+Uppish::clearTemp();
+```
+
+Returns `true` on successful deletion, `false` on finding no files.
+
 ### Pluggability
 
 There are many ways you can plug per-scope settings into each of the `<input type="file">` element.
@@ -323,7 +333,6 @@ Route::group(['namespace' => '\Technovistalimited\Uppish\Controllers'], function
         Route::prefix('/uppish')->group(function () {
             Route::post('/upload/', 'UppishController@store')->name('uppish.upload');
             Route::post('/delete/', 'UppishController@delete')->name('uppish.delete');
-            Route::post('/clear-tmp/', 'UppishController@clearTemp')->name('uppish.clear');
         });
     });
 });
