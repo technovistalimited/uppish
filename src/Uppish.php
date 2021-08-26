@@ -42,13 +42,18 @@ class Uppish
     /**
      * Uppish: Bytes to Megabytes.
      *
+     * @param integer $bytes       Bytes.
+     * @param boolean $round       Boolean Value
+     * @param integer $roundTo     Bytes.
+     * @param integer $roundMethod Round halves up.
+     *
      * @return integer Megabytes.
      */
-    public static function bytesToMb($bytes)
+    public static function bytesToMb($bytes, $round = false, $roundTo = 2, $roundMethod = PHP_ROUND_HALF_UP)
     {
         $uppish = new UppishController;
 
-        return $uppish->bytesToMb($bytes);
+        return $uppish->bytesToMb($bytes, $round, $roundTo, $roundMethod);
     }
 
     /**
