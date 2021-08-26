@@ -26,6 +26,20 @@ class Uppish
     }
 
     /**
+     * Uppish: Extensions to MIMEs.
+     *
+     * @param string $extensions Comma-separated string of extensions.
+     *
+     * @return array String of comma-separated MIME Types.
+     */
+    public static function extensionsToMimes($extensions)
+    {
+        $uppish = new UppishController;
+
+        return $uppish->extensionsToMimes($extensions);
+    }
+
+    /**
      * Uppish: Bytes to Megabytes.
      *
      * @return integer Megabytes.

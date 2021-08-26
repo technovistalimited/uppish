@@ -650,6 +650,24 @@ class UppishController extends Controller
     }
 
     /**
+     * File Extensions to MIME Strings.
+     *
+     * @param string $extensions Comma-separated string of extensions.
+     *
+     * @return string Single string or comma-separated string of MIME types.
+     */
+    public function extensionsToMimes($extensions)
+    {
+        $mimes = $this->getMimeTypesFromExtensions($extensions);
+
+        if (empty($mimes)) {
+            return;
+        }
+
+        return implode(', ', $mimes);
+    }
+
+    /**
      * Mime Types.
      *
      * Returns the MIME type of a file based on its file extension.
