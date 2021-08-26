@@ -50,7 +50,7 @@ Get to your project root, and run the following command:
 git clone git@github.com:technovistalimited/uppish.git packages/technovistalimited/uppish/
 ```
 
-> ⚠️ **REMOVE `.git` DIRECTORY** ⚠️
+> ⚠️ **REMOVE `.git` DIRECTORY** ⚠️<br>
 > Don't forget to remove `.git` directory from the `packages/technovistalimited/uppish/` path if you have a global version controlling in your project. You can use the following command right after the cloning:<br>
 > `cd packages/technovistalimited/uppish/ && rm -rf .git`
 
@@ -249,7 +249,8 @@ Accepts: _(string)_ file extensions/MIME types (comma separated)<br>
 Default: `config('uppish.accepted_extensions')`
 
 ```php
-<x-uppish::files accept="jpg, png, bmp, gif" />
+<x-uppish::files accept="jpg, png, bmp, gif" /> <!-- Not recommended, use MIMEs instead -->
+<x-uppish::files accept="{{ Uppish::extensionsToMimes('jpg, png, bmp, gif') }}" />
 <x-uppish::files accept="image/jpeg, image/png, image/x-ms-bmp, image/gif" />
 ```
 
